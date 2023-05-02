@@ -7,7 +7,7 @@ import React from 'react';
 function App() {
   return (
     <div>
-      <h1>Proyecto Final</h1>
+      <h1>Mr. Batata`s wonderfull App</h1>
 
       <h3>Bienvenido!</h3>
     </div>
