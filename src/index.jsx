@@ -12,8 +12,10 @@ import App from './components/App';
 
 // * Importamos hojas de estilo (SCSS / SASS / CSS)
 // .... Bootstrap iría aquí
-import './styles/css/index.css';
 import 'bootstrap/dist/css/bootstrap.css';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import './styles/css/index.css';
 
 // TODO: Si trabajamos con Redux, crear el Store y aplicar el Middleware de Redux Saga
 

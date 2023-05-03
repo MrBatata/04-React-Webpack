@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import useList from '../../hooks/useList';
 
 function TaskList() {
-  const tasks = useList([]);
+  const tasks = useList(['Ejemplo 1', 'Ejemplo 2']);
   const [newTask, setNewTask] = useState('');
+  // TODO: `tasks` should persist in localStorage
 
   // New task -> creation
   const handleSubmit = (event) => {
     event.preventDefault();
-    tasks.push(newTask);
+    tasks.pushTask(newTask);
     setNewTask('');
   };
 
@@ -20,9 +21,9 @@ function TaskList() {
 
   return (
     <div>
-      <h1>
+      <h4>
         Lista de tareas
-      </h1>
+      </h4>
       <form
         onSubmit={handleSubmit}
       >
@@ -43,12 +44,13 @@ function TaskList() {
         : (
           <ul>
             {
-              tasks.map((task, index) => (
+              tasks.value.map((task, index) => (
                 <li key={index}>
-                  {task}
-                  <input
-                    type="checkbox"
-                    onClick={() => task.remove(index)}
+                  {`#${index} - ${task}`}
+                  <i
+                    className="bi bi-trash-fill"
+                    aria-hidden="true"
+                    onClick={() => tasks.removeTask(index)}
                   />
                 </li>
               ))

@@ -1,15 +1,16 @@
 import { useState } from 'react';
 
 const useList = (initialValue = []) => {
+  // Creates a new state with `value` as `initialValue` or `setValue` return
   const [value, setValue] = useState(initialValue);
 
   // Push new value to list
-  const push = (element) => {
+  const pushTask = (element) => {
     setValue((oldValue) => [...oldValue, element]);
   };
 
   // Remove value to list
-  const remove = (index) => {
+  const removeTask = (index) => {
     setValue((oldValue) => oldValue.filter((_, i) => i !== index));
   };
 
@@ -17,7 +18,7 @@ const useList = (initialValue = []) => {
   const isEmpty = () => value.length === 0;
 
   return {
-    value, setValue, push, remove, isEmpty,
+    value, setValue, pushTask, removeTask, isEmpty,
   };
 };
 
