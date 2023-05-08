@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const useList = (initialValue = []) => {
   // Creates a new state with `value` as `initialValue` or `setValue` return
-  const [value, setValue] = useState(initialValue);
+  const [values, setValue] = useState(initialValue);
 
   // Push new value to list
   const pushTask = (element) => {
@@ -15,10 +15,10 @@ const useList = (initialValue = []) => {
   };
 
   // List is Empty ? boolean
-  const isEmpty = () => value.length === 0;
+  const isEmpty = () => values.length === 0;
 
   return {
-    value, setValue, pushTask, removeTask, isEmpty,
+    values, pushTask, removeTask, isEmpty,
   };
 };
 

@@ -1,19 +1,11 @@
-// Importamos React
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// Imports de Redux/Providers
-// import { Provider } from 'react-redux';
-
-// * Importamos elementos Redux
-// ...
-
-// * Importamos componente principal
 import App from './components/App';
 
-// * Importamos hojas de estilo (SCSS / SASS / CSS)
-// .... Bootstrap iría aquí
+/**
+ * * Styles
+ */
 import 'bootstrap/dist/css/bootstrap.css';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './styles/css/index.css';
 
