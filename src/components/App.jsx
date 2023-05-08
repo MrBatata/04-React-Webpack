@@ -1,14 +1,12 @@
 import React from 'react';
 import TaskList from './lists/TaskList';
 import Settings from './settings/Settings';
-/**
- * * Styles
- */
+
 // TODO: change to css instead of scss (`sass --watch .\src\styles\sass:.\src\styles\css\`)
 import '../styles/sass/App.scss';
 
 /**
- * * Main component
+ * Main component
  * @returns {React.component}
  */
 function App() {
